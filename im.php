@@ -1,7 +1,3 @@
-https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
-
-
-
 <?php
 // Ejecutar el comando ffmpeg desde PHP
 $iptv_url = "http://wz4.dnip.com.br/bemtv/bemtv.sdp/playlist.m3u8";
